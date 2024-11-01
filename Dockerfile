@@ -6,7 +6,7 @@ RUN dnf -y install httpd && \
     systemctl enable httpd && \
     mv /var/www /usr/share/www && \
     sed -ie 's,/var/www,/usr/share/www,' /etc/httpd/conf/httpd.conf
-RUN echo "Jamtastic!" > /usr/share/www/html/index.html
+RUN echo "Jamtastic Bro!" > /usr/share/www/html/index.html
 RUN echo "This is a Bootc VM installed using a bootable container as an rpm-ostree source!" > /etc/motd.d/10-first-setup.motd
 EXPOSE 80
 CMD [ "/sbin/init" ]
